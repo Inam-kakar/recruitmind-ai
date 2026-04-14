@@ -44,10 +44,10 @@ def parse_cv_with_gemini(raw_text: str) -> CandidateSchema | None:
     # We convert our Pydantic model into a raw JSON schema string
     schema_instructions = json.dumps(CandidateSchema.model_json_schema())
 
-    prompt = f"""you are an expert profile  AI crawler  through the linkedin and gethub . 
-    your job is mainly to visit linkedin and gethub
+    prompt = f"""you are an expert profile  AI crawler  through the linkedin and github . 
+    your job is mainly to visit linkedin and github
     and check if those links are correct
-    2.extract inforamtion such as projects and experiences from their linkedin and gethuba.
+    2.extract inforamtion such as projects and experiences from their linkedin and githuba.
     
 
     

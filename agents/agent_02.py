@@ -12,7 +12,7 @@ from models.candidate import CandidateSchema
 client = genai.Client(api_key=settings.GEMINI_API_KEY)
 
 def extract_text_from_pdf(file_path: str) -> str:
-    """Reads a PDF file, extracts raw text, and hunts for hidden hyperlinks."""
+    """Reads a PDF file or images, extracts raw text, and hunts for hidden hyperlinks."""
     try:
         doc = fitz.open(file_path)
         text = ""
